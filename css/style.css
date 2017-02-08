@@ -45,7 +45,6 @@ html, body{
     .progressText{
       position: absolute;
       left: 40%;
-      margin-top: 0.5em;
       color: #fff;
       font-size: 2em;
     }
