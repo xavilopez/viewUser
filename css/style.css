@@ -1,0 +1,103 @@
+html, body{
+  height: 100vh;
+  width: 100vw;
+}
+.container{
+}
+.userView{
+  background-color: #fcfcfc;
+  height: 20%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+  .profilePicView{
+    height: 100%;
+  }
+    .profilePic{
+      height: 80%;
+      width: 80%;
+    }
+      .profilePicSrc{
+        max-height: 100%;
+        max-width: 100%;
+        border-radius: 2em;
+        margin: 1em;
+      }
+
+  .profileDetailView{
+    height: 100%;
+    margin-top: 2em;
+  }
+.progressView{
+  background-color: #6a6c6e;
+  height: 10%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+  .progressBar{
+    height: 100%;
+    width: 30%;
+    background-color: #F9CF00;
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5);
+  }
+    .progressText{
+      position: absolute;
+      left: 40%;
+      margin-top: 0.5em;
+      color: #fff;
+      font-size: 2em;
+    }
+.recordView{
+  background-color: #D4D8DC;
+  height: 70%;
+  width:100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-y: scroll;
+}
+.recordList{
+  margin-top: 2em;
+  height: 100%;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+  .recordCard{
+    background-color: #363739;
+    height: 20%;
+    width: 100%;
+    margin-bottom: 1em;
+    box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+  }
+  .recordCard .container{
+    height: 100%;
+  }
+    .recordGif{
+      position: relative;
+      background-color: #fff;
+      height: 100%;
+      text-align: center;
+      overflow:hidden;
+    }
+    .recordGif img{
+      max-height: 150%;
+      max-width: 150%;
+      /*center oversized img*/
+      position: absolute;
+      top: -9999px;
+      bottom: -9999px;
+      left: -9999px;
+      right: -9999px;
+      margin: auto;
+    }
+
+    .recordDetail{
+      position: relative;
+      background-color: #363739;
+      height: 100%;
+    }
+    .recordDetail h3 small{
+      color: #F9CF00;
+    }
