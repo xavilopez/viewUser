@@ -7,4 +7,8 @@ $(function() {
 
   })
 
+  $('.recordCard').on('click', (e)=>{
+    $('.progressText').text('NIVEL 2');
+  })
+
 });
