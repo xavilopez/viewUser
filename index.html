@@ -21,6 +21,9 @@
 <body>
   <!--SDK Facebook-->
   <script>
+    var FBVAR ={
+      fbValue : "Fuckoff!";
+    };
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
       console.log('statusChangeCallback');
@@ -93,13 +96,11 @@
       </div>
       <div class="col-xs-8 profileDetailView">
           <div id="profileName" class="profileDetail">
+            Cargando perfil de usuario..
           </div>
           <div id="profileGender" class="profileDetail">
           </div>
           <div id="profileEmail" class="profileDetail">
-          </div>
-          <div class="profileDetail">
-            objetivo: conquistar chicas
           </div>
       </div>
     </div>
@@ -205,6 +206,8 @@
    <script src="js/bootstrap.min.js"></script>
 
    <script type="text/javascript" src="js/fito.js"></script>
+   <script type="text/javascript" src="js/db.js"></script>
+
 </body>
 
 </html>
