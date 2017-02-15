@@ -79,7 +79,7 @@
 
     function testAPI() {
       console.log('Welcome!  Fetching your information.... ');
-      FB.api('/me','GET',{"fields":"id,name,gender,email,age_range,picture{url}"},function(response) {
+      FB.api('/me','GET',{"fields":"id,name,gender,email,age_range,picture.type(large){url}"},function(response) {
           document.getElementById('profilePic').src = response.picture.data.url;
           document.getElementById('profileName').innerHTML = "nombre: " + response.name;
           document.getElementById('profileGender').innerHTML = "sexo: " + response.gender;
