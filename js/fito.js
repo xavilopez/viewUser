@@ -1,5 +1,5 @@
 $(function() {
-  $(document).on('click','.recordCard' (e)=>{
+  $(document).on('click','.recordCard', (e)=>{
     var eTarget =  $(e.target).find('.recordDetail');
     var context = $(eTarget).context;
     var parent = $(context).closest('.recordCard');
