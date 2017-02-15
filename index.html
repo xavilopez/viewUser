@@ -87,8 +87,22 @@
 
       });
     }
+
+    var dt = [];
     function selectUser(fbUserId){
-      console.log(fbUserId);
+      if (fbUserId === '10210223548018351') {
+        //xavi inicio secion
+        dt[0]=['<div class="col-xs-6 recordGif"><img src="img/curvy-bench-press.gif"/></div><div class="col-xs-6 recordDetail"><h3><small>Curvy Bench Press</small></h3></div>'];
+        dt[1]=['<div class="col-xs-6 recordGif"><img src="img/curvy-leg-curls.gif"/></div><div class="col-xs-6 recordDetail"><h3><small>Curvy Leg Curls</small></h3></div>'];
+        dt[2]=['<div class="col-xs-6 recordGif"><img src="img/curvy-women-back-exercises.gif"/></div><div class="col-xs-6 recordDetail"><h3><small>Curvy Women Back Exercises</small></h3></div>'];
+        dt[3]=['<div class="col-xs-6 recordGif"><img src="img/curvy-women-leg-exercises.gif"/></div><div class="col-xs-6 recordDetail"><h3><small>Curvy Women Leg Exercises</small></h3></div>'];
+        dt[4]=['<div class="col-xs-6 recordGif"><img src="img/decline-bench-press.gif"/></div><div class="col-xs-6 recordDetail"><h3><small>Decline Bench Press</small></h3></div>'];
+      }
+
+      for (var i = 0; i < dt.length; i++) {
+        var str ='  <div class="recordCard"><div class="row container">'+ dt[i] +'</div></div>';
+        $('.recordList').append(str);
+      }
     }
   </script>
     <div class="row userView container-fluid">
@@ -115,7 +129,7 @@
     <div class="row recordView container-fluid">
       <div class="recordList container">
 
-        <div class="recordCard">
+        <!--<div class="recordCard">
           <div class="row container">
             <div class="col-xs-6 recordGif">
               <img src="img/curvy-bench-press.gif"/>
@@ -179,7 +193,7 @@
               <h3><small>Decline Bench Press</small></h3>
             </div>
           </div>
-        </div>
+        </div>-->
 
       </div><!--recordList-->
     </div><!--recordView-->
