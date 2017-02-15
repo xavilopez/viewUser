@@ -1,4 +1,6 @@
-console.log(FBVAR.fbValue);
+var FBVAR ={
+  fbValue : "Fuckoff!"
+};
 $(function() {
 
 });
