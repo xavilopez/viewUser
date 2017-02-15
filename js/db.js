@@ -1,4 +1,4 @@
 
 $(function() {
-console.log(FBVAR .fbValue);
+carlblack.call();
 });
