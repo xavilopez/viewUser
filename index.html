@@ -76,14 +76,16 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-    var fbValue = "Fuckoff!";
-    var carlblack = (function(fbValue){
+    var FBVAR ={
+      fbValue : "Fuckoff!"
+    };
+    var carlblack = (function(FBVAR.fbValue){
       return {
           call: function() {
-              console.log(fbValue);
+              console.log(FBVAR.fbValue);
             }
           };
-    })(fbValue);
+    })(FBVAR.fbValue);
     function testAPI() {
       console.log('Welcome!  Fetching your information.... ');
       FB.api('/me','GET',{"fields":"id,name,gender,email,age_range,picture.type(large){url}"},function(response) {
@@ -91,7 +93,7 @@
           document.getElementById('profileName').innerHTML = "nombre: " + response.name;
           document.getElementById('profileGender').innerHTML = "sexo: " + response.gender;
           document.getElementById('profileEmail').innerHTML = "email: " + response.email;
-          fbValue = response.id;
+          FBVAR.fbValue = response.id;
 
       });
     }
