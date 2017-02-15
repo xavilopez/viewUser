@@ -80,8 +80,10 @@
     function testAPI() {
       console.log('Welcome!  Fetching your information.... ');
       FB.api('/me','GET',{"fields":"id,name,gender,email,age_range,picture{url}"},function(response) {
-          //document.getElementById('profilePic').src = response
-          console.log(response.picture.data.url);
+          document.getElementById('profilePic').src = response.picture.data.url;
+          document.getElementById('profileName').innerHTML = "nombre: " + response.name;
+          document.getElementById('profileGender').innerHTML = "sexo: " + response.gender;
+          document.getElementById('profileEmail').innerHTML = "email: " + response.email;
       });
     }
   </script>
@@ -90,14 +92,11 @@
           <img id="profilePic" class="profilePicSrc" src="img/imgprofile.jpg">
       </div>
       <div class="col-xs-8 profileDetailView">
-          <div class="profileDetail">
-            nombre: {}
+          <div id="profileName" class="profileDetail">
           </div>
-          <div class="profileDetail">
-            peso: 40kg
+          <div id="profileGender" class="profileDetail">
           </div>
-          <div class="profileDetail">
-            estatura:160 cm
+          <div id="profileEmail" class="profileDetail">
           </div>
           <div class="profileDetail">
             objetivo: conquistar chicas
