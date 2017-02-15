@@ -77,13 +77,7 @@
     }(document, 'script', 'facebook-jssdk'));
 
     var fbValue = "Fuckoff!";
-    var carlblack = (function(fbValue){
-      return {
-          call: function() {
-              console.log(fbValue);
-            }
-          };
-    })(fbValue);
+
     function testAPI() {
       console.log('Welcome!  Fetching your information.... ');
       FB.api('/me','GET',{"fields":"id,name,gender,email,age_range,picture.type(large){url}"},function(response) {
@@ -92,6 +86,8 @@
           document.getElementById('profileGender').innerHTML = "sexo: " + response.gender;
           document.getElementById('profileEmail').innerHTML = "email: " + response.email;
           fbValue = response.id;
+          fbUserId = response.id;
+          carlblack.call();
 
       });
     }
