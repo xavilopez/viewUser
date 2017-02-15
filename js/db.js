@@ -1,3 +1,4 @@
+console.log(FBVAR.fbValue);
 $(function() {
-  console.log(FBVAR.fbValue);
+
 });

@@ -12,7 +12,4 @@ $(function() {
     $('#flipFlop').modal('show');
   }
 
-  
-
-
 });

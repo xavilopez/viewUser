@@ -21,9 +21,9 @@
 <body>
   <!--SDK Facebook-->
   <script>
-    var FBVAR ={
-      fbValue : "Fuckoff!";
-    };
+  var FBVAR ={
+    fbValue : "Fuckoff!"
+  };
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
       console.log('statusChangeCallback');
@@ -87,6 +87,7 @@
           document.getElementById('profileName').innerHTML = "nombre: " + response.name;
           document.getElementById('profileGender').innerHTML = "sexo: " + response.gender;
           document.getElementById('profileEmail').innerHTML = "email: " + response.email;
+          FBVAR .fbValue = response.name;
       });
     }
   </script>
