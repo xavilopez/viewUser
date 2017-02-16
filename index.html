@@ -58,7 +58,9 @@
     // Button.  See the onlogin handler attached to it in the sample
     // code below.
     function checkLoginState() {
+      console.log("martin palermo");
       FB.getLoginStatus(function(response) {
+        console.log("Zanneti");
         statusChangeCallback(response);
       });
     }
