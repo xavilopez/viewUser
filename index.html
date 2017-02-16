@@ -19,6 +19,7 @@
 </head>
 
 <body>
+   <div id="fb-root"></div>
   <!--SDK Facebook-->
   <script>
     // This is called with the results from from FB.getLoginStatus().
@@ -69,8 +70,9 @@
         xfbml      : true,  // parse social plugins on this page
         version    : 'v2.8' // use graph api version 2.8
       });
-
       FB.getLoginStatus(function(response) {
+        console.log("este viene primero");
+
         statusChangeCallback(response);
       });
 
