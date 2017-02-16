@@ -96,6 +96,7 @@
     }
 
     var dt = [];
+    var exp = 0;
     function selectUser(fbUserId){
       console.log(fbUserId);
       if (fbUserId === '10210223548018351') {
@@ -105,14 +106,45 @@
         dt[2]=['<div class="col-xs-6 recordGif"><img src="img/curvy-women-back-exercises.gif"/></div><div class="col-xs-6 recordDetail"><h3><small>Curvy Women Back Exercises</small></h3></div>'];
         dt[3]=['<div class="col-xs-6 recordGif"><img src="img/curvy-women-leg-exercises.gif"/></div><div class="col-xs-6 recordDetail"><h3><small>Curvy Women Leg Exercises</small></h3></div>'];
         dt[4]=['<div class="col-xs-6 recordGif"><img src="img/decline-bench-press.gif"/></div><div class="col-xs-6 recordDetail"><h3><small>Decline Bench Press</small></h3></div>'];
+        exp=1200;
+      }
+      if (fbUserId === '10212654532625228') {
+        //martin
+        dt[0]=['<div class="col-xs-6 recordGif"><img src="img/curvy-women-back-exercises.gif"/></div><div class="col-xs-6 recordDetail"><h3><small>Curvy Women Back Exercises</small></h3></div>'];
+        dt[1]=['<div class="col-xs-6 recordGif"><img src="img/curvy-women-leg-exercises.gif"/></div><div class="col-xs-6 recordDetail"><h3><small>Curvy Women Leg Exercises</small></h3></div>'];
+        exp=800;
       }
 
       for (var i = 0; i < dt.length; i++) {
         var str ='  <div class="recordCard"><div class="row container">'+ dt[i] +'</div></div>';
         $('.recordList').append(str);
       }
+      _progressUserFito(exp);
+    }
+
+    function _progressUserFito(exp){
+      var wdth = 0;
+      var lvl = '';
+      //lvl1 +1000
+      if (exp < 1000) {
+        wdth = parseFloat(exp) * 100 / 1000;
+        lvl = 'NIVEL 1';
+      }
+      //lvl2 +1500
+      if (exp >= 1000 & exp < 2500) {
+        wdth = parseFloat(exp) * 100 / 2500;
+        lvl = 'NIVEL 2';
+      }
+      //lvl3 +3250
+      if (exp >= 2500 & exp < 5750) {
+        wdth = parseFloat(exp) * 100 / 5750;
+        lvl = 'NIVEL 3';
+      }
+      $('.progressText').content(lvl);
+      $('.progressBar').css('width',wdth+'%');
     }
   </script>
+
     <div class="row userView container-fluid">
       <div class="col-xs-4 profilePicView">
           <img id="profilePic" class="profilePicSrc" src="img/imgprofile.jpg">
