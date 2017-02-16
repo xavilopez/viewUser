@@ -37,11 +37,18 @@
         document.getElementById('status').innerHTML = 'Please log ' +
           'into this app.';
         } else {
-          // The person is not logged into Facebook, so we're not sure if
-          // they are logged into this app or not.
-          document.getElementById('status').innerHTML = 'Please log ' +
-          'into Facebook.';
+          //response.status returns "unknow" = logout()
+          _fbLogOut();
         }
+    }
+
+    function _fbLogOut(){
+      //set component's content to its default
+      document.getElementById('profilePic').src ="img/imgprofile.jpg";
+      document.getElementById('profileName').innerHTML = "Inicia sesión para ver los datos del usuario";
+      document.getElementById('profileGender').innerHTML = "";
+      document.getElementById('profileEmail').innerHTML = "";
+      $('.recordList').empty();
     }
 
     // This function is called when someone finishes with the Login
@@ -90,6 +97,7 @@
 
     var dt = [];
     function selectUser(fbUserId){
+      console.log(fbUserId);
       if (fbUserId === '10210223548018351') {
         //xavi inicio secion
         dt[0]=['<div class="col-xs-6 recordGif"><img src="img/curvy-bench-press.gif"/></div><div class="col-xs-6 recordDetail"><h3><small>Curvy Bench Press</small></h3></div>'];
