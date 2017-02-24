@@ -4,7 +4,7 @@ $(function() {
     var context = $(eTarget).context;
     var parent = $(context).closest('.recordCard');
     var str = $(parent).find('small').text();
-    console.log($(str).trim().toUpper());
+    console.log($(str).toLowerCase().replace(/ /g,''));
     _openModal(str);
   })
 
