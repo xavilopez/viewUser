@@ -9,7 +9,19 @@ $(function() {
   })
 
   function _openModal(str){
-
+    var link;
+    if (str == "curvybenchpress") {
+      link = "https://xavilopez.github.io/curvybenchpress/";
+    }else if (str == "curvylegcurls") {
+      link = "https://xavilopez.github.io/curvybenchpress/";
+    }else if (str == "curvywomenbackexercises") {
+      link = "https://xavilopez.github.io/curvywomenback/";
+    }else if (str == "declinebenchpress") {
+      link = "https://xavilopez.github.io/declinebenchpress/";
+    }else if (str == "dumbbell") {
+      link = "https://xavilopez.github.io/dumbbell/";
+    }
+    $('.viewImageFrame').attr('src', link);
     $('#flipFlop').modal('show');
   }
 
