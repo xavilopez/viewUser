@@ -3,8 +3,8 @@ $(function() {
     var eTarget =  $(e.target).find('.recordDetail');
     var context = $(eTarget).context;
     var parent = $(context).closest('.recordCard');
-    var str = $(parent).find('small').text();
-    console.log($(str).toLowerCase().replace(/ /g,''));
+    var str = $(parent).find('small').text().toLowerCase().replace(/ /g,'');
+    console.log(str);
     _openModal(str);
   })
 
